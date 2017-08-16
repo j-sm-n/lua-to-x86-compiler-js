@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>minilua</title>
+    <meta name="description" content="JS Compiler">
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    
+    <header>
+      <ul>
+        <li class="phase lex">Lex</li><li class="phase parse">Parse</li><li class="phase emit">Emit</li>
+      </ul>
+    </header>
+
+    <main
+      contenteditable="false"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+>print("Hello, world.") -- typical entry point
+
+for i=10,1,-1 do
+  if (i == 10) or (i == 5)  then
+    print("Bazz")
+  elseif (i == 9) or (i == 6) or (i == 3) then&#13;
+    print("Fooz")
+  else
+&#9;print(i)
+  end
+end
+
+print("Blastoff!")
+
+</main>
+    
+    <script
+			  src="https://code.jquery.com/jquery-2.2.1.min.js"
+			  integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+			  crossorigin="anonymous"></script>
+    <script src="/lex.js"></script>
+    <script src="/parse.js"></script>
+    <script src="/emit.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
